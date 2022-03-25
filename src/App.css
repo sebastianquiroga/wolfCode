@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--secondary);
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 20px;
+    border: 3px solid var(--secondary);
+}
+
+:root {
+    scroll-behavior: smooth;
+    --primary: #fafaf0;
+    --secondary: #222831;
+    --success: #e0ff00;
+    --shadow: 0px 0px 20px 0px #222138;
+}
+
+
+/* ===============================HEADER=========================== */
+
+.navBar {
+    background-color: var(--primary);
+    color: var(--secondary);
+    transition: all .3s ease-in;
+}
+
+.navBar a {
+    color: var(--secondary);
+}
+
+.navBar a:hover {
+    color: var(--success);
+    background: var(--secondary);
+    transition: all .3s ease-in;
+}
+
+.navBarActive {
+    background: var(--secondary);
+    color: var(--primary);
+    transition: all .3s ease-in;
+}
+
+.navBarActive a {
+    color: var(--primary);
+}
+
+.navBarActive a:hover {
+    color: var(--success);
+    transition: all .3s ease-in;
+}
+
+@media screen and (max-width: 960px) {
+    .Menu {
+        background: var(--primary);
+    }
+    .MenuActive {
+        background-color: var(--secondary);
+    }
+    .navBar a:hover {
+        background: none;
+    }
+}
+
+.Svg {
+    fill: var(--secondary)
+}
+
+.SvgActive {
+    fill: var(--primary);
+}
+
+.linkActive {
+    color: var(--success);
+}
+
+.img-switch {
+    position: absolute;
+    width: 15px;
+    transition: .5s all ease;
+}
+
+.img-switch__active {
+    transform: translateX(25px);
+}
+
+.video {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.btn-down {
+    background: none;
+    width: 40px;
+    height: 40px;
+    transition: all .2s ease-in;
+    position: absolute;
+    bottom: 25px;
+    left: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: heartbeat 2s ease-in-out infinite alternate both;
+    animation: heartbeat 2s ease-in-out infinite alternate both;
+}
+
+.btn-down svg {
+    color: var(--secondary);
+    height: 30px;
+    width: 30px;
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+/* ===============================ABOUT=========================== */
+
+.about {
+    width: 100%;
+    height: 100vh;
+    max-width: 1600px;
+    padding: 50px;
+    display: flex;
+    place-content: center;
+    color: var(--primary);
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__tittle,
+.about__subtittle {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: start;
+}
+
+.about__subtittle {
+    font-weight: 700;
+}
+
+.dot {
+    color: var(--success);
+}
+
+.about,
+.about-card {
+    background: linear-gradient(to right, rgba(34, 40, 49, 0.8), rgba(34, 40, 49, 0.8)), url(../public/resources/ilustrations/background-1.jpg) no-repeat right / cover;
+    background-attachment: fixed;
+}
+
+.card-img {
+    width: 150px;
+    -webkit-animation: flicker-1 1.3s linear infinite alternate both;
+    animation: flicker-1 1.3s linear infinite alternate both;
+}
+
+@-webkit-keyframes flicker-1 {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    41.99% {
+        opacity: 1;
+    }
+    42% {
+        opacity: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    43.01% {
+        opacity: 1;
+    }
+    47.99% {
+        opacity: 1;
+    }
+    48% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    49.01% {
+        opacity: 1;
+    }
+}
+
+@keyframes flicker-1 {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    41.99% {
+        opacity: 1;
+    }
+    42% {
+        opacity: 0;
+    }
+    43% {
+        opacity: 0;
+    }
+    43.01% {
+        opacity: 1;
+    }
+    47.99% {
+        opacity: 1;
+    }
+    48% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    49.01% {
+        opacity: 1;
+    }
+}
+
+.card__text {
+    grid-column: 2/3;
+    text-align: start;
+    align-self: center;
+    font-size: 1rem;
+    padding-right: 120px;
+}
+
+.nextContainer {
+    grid-column: 2/3;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+}
+
+.btn-next,
+.btn-back {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-next {
+    -webkit-animation: shake-left 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+    animation: shake-left 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+}
+
+@-webkit-keyframes shake-left {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 0 50%;
+    }
+    10% {
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes shake-left {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 0 50%;
+    }
+    10% {
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+.btn-back {
+    display: none;
+    -webkit-animation: shake-right 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+    animation: shake-right 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+}
+
+.btn-next:hover,
+.btn-back:hover {
+    -webkit-animation: none;
+    animation: none;
+}
+
+@-webkit-keyframes shake-right {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 100% 50%;
+    }
+    10% {
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes shake-right {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 100% 50%;
+    }
+    10% {
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+.btn-next svg,
+.btn-back svg {
+    height: 30px;
+    width: 30px;
+}
+
+.btn-about {
+    cursor: pointer;
+    background: var(--success);
+    transition: all .3s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+}
+
+.btn-about a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.btn-about:hover {
+    background: none;
+}
+
+
+/* ===============================SKILLS=========================== */
+
+.img-skill {
+    width: 40px;
+    padding: 5px;
+}
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello-horizontal {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+/* ===============================PROJECTS =========================== */
+
+#subtittle {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary);
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+}
+
+.projects-container,
+.contact,
+.empty-space {
+    background: linear-gradient(to right, rgba(34, 40, 49, 0.8), rgba(34, 40, 49, 0.8)), url(../public/resources/ilustrations/BG2.jpg) no-repeat bottom / cover;
+    background-attachment: fixed;
+}
+
+.empty-space {
+    width: 100%;
+    max-width: 1600px;
+    height: 200px;
+}
+
+
+/* ===============================CONTACT =========================== */
+
+.card-2 {
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    background: var(--primary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0px 0px 20px 0px #222138;
+    overflow: hidden;
+    transition: all .4s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+}
+
+.contact-form {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    text-align: center;
+    width: 90%;
+    height: 100%;
+}
+
+.contact-text {
+    grid-column: 1/2;
+    justify-content: center;
+    align-self: center;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.contact-tittle {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.contact-links {
+    list-style: none;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: all .4s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+}
+
+.contact-img {
+    width: 25px;
+    padding-top: 20px;
+}
+
+#name,
+#email,
+#c-text {
+    width: 90%;
+    border: none;
+    background: transparent;
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: all .2s linear;
+}
+
+#name:focus,
+#email:focus,
+#c-text:focus {
+    border-bottom: 2px solid var(--success);
+}
+
+
+/* =========================== OTHER ELEMENTS ============================ */
+
+.ButtonUp {
+    transform: scale(0);
+}
+
+.ButtonUpActive {
+    transform: scale(1);
+}
+
+.buttonUp {
+    padding-top: 5px;
+    width: 25px;
+}
+
+.error,
+.submitForm {
+    color: var(--secondary);
+    font-size: .8rem;
+    transition: all .3s ease-in-out;
+}
+
+
+/* =========================== FOOTER ============================ */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer-tittle {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* ====================================== STYLE BUTTONS ============================================ */
+
+.dark-btn,
+.smtBtn {
+    border: none;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+}
+
+.dark-btn {
+    background-color: var(--primary);
+}
+
+.dark-btn:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+.smtBtn {
+    background-color: var(--success);
+}
+
+
+/* ====================================== MEDIA QUERIES ============================================ */
+
+@media screen and (max-width:500px) {
+    .card-img {
+        width: 100px;
+    }
+    .projects__img {
+        width: 95%;
+    }
+    .card-2 {
+        padding: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .contact-form {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        text-align: center;
+        width: 100%;
+    }
+    .footer-tittle {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .card-img {
+        width: 80px;
+    }
+    .contact-text {
+        font-size: .8rem;
+    }
+}
